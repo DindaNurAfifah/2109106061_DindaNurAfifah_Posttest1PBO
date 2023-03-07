@@ -20,11 +20,11 @@ public class AssetPerusahaan {
     public void add(Asset data){
         if(!find(data.getIdAsset())){
             list.add(data);
-            System.out.println("===============================================");
-            System.out.println("           Adding new data Succesfully         ");
+            System.out.println("=======================================================================================");
+            System.out.println("                                  Adding new data Succesfully                          ");
         } else {
-            System.out.println("===============================================");
-            System.out.println("          This ID Is Already Available         ");
+            System.out.println("=======================================================================================");
+            System.out.println("                                This ID Is Already Available                           ");
         }
     }
     
@@ -48,12 +48,12 @@ public class AssetPerusahaan {
         }
         
         if(dataDel == null) {
-            System.out.println("===============================================");
-            System.out.println("              ID CHOOSEN NOT EXIST             ");
+            System.out.println("=======================================================================================");
+            System.out.println("                                      ID CHOOSEN NOT EXIST                             ");
         } else{
             list.remove(dataDel);
-            System.out.println("===============================================");
-            System.out.println("               DELETE DATA SUCSSES             ");
+            System.out.println("=======================================================================================");
+            System.out.println("                                      DELETE DATA SUCSSES                              ");
         }
     }
     
@@ -72,30 +72,34 @@ public class AssetPerusahaan {
             System.out.println("Enter New Data");
             System.out.print("ID ASSET: ");
             int IdAsset = input.nextInt();
-            System.out.println("NAMA BARANG: ");
+            input.nextLine();
+            System.out.print("NAMA BARANG: ");
             String NamaAsset = input.nextLine();
-            System.out.println("DIVISI: ");
+            System.out.print("DIVISI: ");
             String Divisi = input.nextLine();
             System.out.print("KUANTITAS: ");
             int Kuantitas = input.nextInt();
+            input.nextLine();
             System.out.print("HARGA: ");
             int Harga = input.nextInt();
+            input.nextLine();
             ass.setIdAsset(IdAsset);
             ass.setNamaAsset(NamaAsset);
             ass.setDivisi(Divisi);
             ass.setHarga(Harga);
             ass.setKuantitas(Kuantitas);
-            System.out.println("===============================================");
-            System.out.println("               UPDATE DATA SUCSSES             ");
+            System.out.println("=======================================================================================");
+            System.out.println("                                     UPDATE DATA SUCSSES                               ");
         } else {
-            System.out.println("===============================================");
-            System.out.println("              ID CHOOSEN NOT EXIST             ");
+            System.out.println("=======================================================================================");
+            System.out.println("                                     ID CHOOSEN NOT EXIST                              ");
         }
     }
     
     public void tampil() {
         if(list.isEmpty()) {
-            System.out.println("                     Empty                     ");
+            System.out.println("=======================================================================================");
+            System.out.println("                                              Empty                                    ");
         } else {
             System.out.printf("%-20s%-20s%-20s%-20s%-20s%-20s", "ID ASSET", "NAMA BARANG", "DIVISI", "KUANTITAS", "HARGA", "\n");
             System.out.println("\n");
